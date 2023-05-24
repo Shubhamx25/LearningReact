@@ -1,8 +1,16 @@
-import React from 'react'
+import React from 'react';
+import Card from './components/Card';
 
 const App = () => {
   return (
-    <div>Working app</div>
+      <div className='card-container'>
+        <Card/>
+        <Card/>
+        <Card/>
+        <Card/>
+        <Card/>
+        <Card/>
+      </div>
   )
 }
 
