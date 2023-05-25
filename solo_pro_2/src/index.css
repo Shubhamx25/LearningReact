@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Kanit&family=Lato&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(65, 65, 65);
+    color: rgb(207, 207, 207);
+    font-family: 'Inter', sans-serif;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Lato', sans-serif; 
+}
+
+.fixture-card{
+    background-color: black;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 11px;
+    border: solid 0.5px rgb(110, 110, 110);
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 1200px) {
+   .fixture-card{
+    width: 65%;
+   }
+}
+
+.fixture-league{
+    background-color: rgb(39, 38, 38);
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+    padding: 5px 15px;
+    font-size: 14px;
+}
+.fixture-league img{
+    background-color: white;
+    border-radius: 50%;
+    width: 20px;
+    padding: 3px;
+    margin-right: 7px;
+}
+
+
+.fixture-time{
+    position: absolute;
+    left: 25px;
+    font-size: 16px;
+}
+.fixture-time span{
+    font-size: 9px;
+}
+
+.fixture-details{
+    position: relative;
+    padding: 20px;
+}
+
+.fixture-teams{
+    display: grid;
+    grid-template-columns: 9fr 1.5fr 9fr;
+}
+
+.team{
+    display: flex;
+    gap: 4px;
+}
+.home-team{
+    justify-self: end;
+        align-self: center;
+    }
+.away-team{
+    justify-self: start;
+    
+}
+.verses{
+    justify-self: center;
+    align-self: center;
+}
+.team-name{
+    align-self: center;
+    
+}
+
+
+/* .fixture-details, .team, .fixture-teams {
+    display: flex;
+}
+
+.fixture-details{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+}
+.fixture-teams, .fixture-league{
+    display: flex;
+    align-items: center; 
+}
+.team{
+    display: flex;
+    align-items: center;
+    width: 50%;
+} */
+
+.team-logo{
+    width: 40px;
+    height: 40px;
+}
+.team-name{
+    font-size: 18px;
+}
