@@ -1,11 +1,12 @@
 import React from 'react';
 
 import Card from './components/Card';
+import Dropdown from './components/Dropdown';
 
-import Data from './Api/ApiData';
+import Data from './Api/ApiData'; 
+
 
 const App = () => {
-
   let cardData = Data.map((fixture) => {
    
     let timeString = fixture.fixture.date.split('T');
@@ -24,6 +25,7 @@ const App = () => {
 
   return (
     <div>
+        <Dropdown />
         {cardData}
     </div>
   )
