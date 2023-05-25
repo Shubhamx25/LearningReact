@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    color: white;
+
+}
+
+.container{
+    width: 50%;
+    margin: auto;
+    background-color: rgb(47, 48, 48); 
+}
+header{
+    background-color: darkmagenta;
+}
+
+header, header > div{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+header{
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+header img{
+    width: 100px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.meme-form{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+.meme-form input, .meme-form button {
+    padding: 7px;
+}
+.meme-form input{
+    text-indent: 7px;
+}
+
+.meme-form button{
+    grid-column: 1 / -1;
+    background-color: darkmagenta;
+    color: white;
+}
+
+.meme-img{
+    width: 100%;
+    background-color: red;
+}
