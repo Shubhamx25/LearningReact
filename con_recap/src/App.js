@@ -18,10 +18,9 @@ const App = () => {
 
     let handleClick = () => {
         setTasks((prevTaskArr) => {
-            prevTaskArr.push(`Thing ${myArr.length + 1}`)
-            console.log('after state function: ',prevTaskArr);
+           return [...prevTaskArr, `Thing ${prevTaskArr.length + 1}`];
         })
-
+ 
     }
   return (
     <div className='container'>
