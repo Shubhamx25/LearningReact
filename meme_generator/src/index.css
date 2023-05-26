@@ -7,13 +7,14 @@
 body{
     background-color: black;
     color: white;
-
+    
 }
 
 .container{
     width: 50%;
     margin: auto;
     background-color: rgb(47, 48, 48); 
+    
 }
 header{
     background-color: darkmagenta;
@@ -56,5 +57,31 @@ header img{
 
 .meme-img{
     width: 100%;
-    background-color: red;
+    padding: 20px;
+    position: relative;
+}
+.meme-img img{
+    width: 100%;
+    aspect-ratio: 16 / 11;
+    background-color: rgb(0, 0, 0);
+    object-fit: contain;
+    object-position: center;
+}
+.top-text, .bottom-text{
+    position: absolute;
+   color: white;
+   font-size: 4rem;
+   font-weight: 700;
+}
+.top-text{
+    top: 30px;
+    width: 100%;
+    text-align: center;
+
+}
+.bottom-text{
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+    
 }

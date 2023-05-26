@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <header>
           <div>
-            <img src={img} />
+            <img src={img} alt="logo" />
             <h2>Meme generator</h2>
           </div>
           <div>
