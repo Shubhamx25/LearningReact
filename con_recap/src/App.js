@@ -1,4 +1,5 @@
 import React from 'react';
+import List from './List';
 
 let myArr = ['Thing 1','Thing 2','Thing 3'];
 
@@ -25,7 +26,7 @@ const App = () => {
   return (
     <div className='container'>
         <button onClick={handleClick}>Add items</button>
-        {data}
+        <List data = {data} />
     </div>
   )
 }

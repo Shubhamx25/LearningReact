@@ -5,12 +5,23 @@ import memeData from './getMeme';
 
 
 const Meme = () => {
-  let [memeImg, setMemeImg] = React.useState('https://i.imgflip.com/23ls.jpg');
+  let [allMeme , setAllMeme] = React.useState(memeData);
+  let [meme, setMeme] = React.useState({
+    img:memeData.data.data.memes[Math.floor(Math.random() * memeData.data.data.memes.length)].url,
+    top: '',
+    bottom: ''
+  
+  });
 
   let handleClick = () => {
     let randomNo = Math.floor(Math.random() * memeData.data.data.memes.length);
-    setMemeImg(memeImg = memeData.data.data.memes[randomNo].url);
-    console.log(memeImg);  
+    setMeme((prevMeme) => {
+      return {
+        ...prevMeme,
+        img: memeData.data.data.memes[randomNo].url
+      }
+    });
+     
   }
 
 
@@ -24,7 +35,7 @@ const Meme = () => {
         <div className='meme-img'>
              <p className='top-text'>Top Text</p>
              <p className='bottom-text'> Bottom Text</p>
-            <img src={memeImg} alt='meme' />
+            <img src={meme.img} alt='meme' />
         </div>
      </div>
   )
