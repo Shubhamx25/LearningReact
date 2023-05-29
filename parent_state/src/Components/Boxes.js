@@ -5,23 +5,30 @@ import Box from './Box';
 const Boxes = () => {
     const [boxData, setboxData] = React.useState(Data);
 
-   /*  const toggleOn = () => {
-      setboxData(prevBoxData => {
-        return([...prevBoxData,prevBoxData.on= !prevBoxData.on])
+    const toggleOn = (ids) => {
+      setboxData(prevBoxData => { 
+      return (
+        prevBoxData.map(item => {
+          if(item.id === ids){
+            item.on = !item.on;
+          } 
+          return item;
+        })
+      )
+      console.table(prevBoxData);
       })
-    } */
-
+    }
+    
     let boxes = boxData.map((item) => {
       console.log("Item in map: ",item)
       return(  
-           <Box bData = {item} />
-  )
+           <Box bData = {item} handleClick = {toggleOn} />
+      )
     })
     
   return (
     <div className='box-container'>
       {boxes}
-
     </div>
     
   )

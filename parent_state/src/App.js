@@ -13,6 +13,7 @@ const App = () => {
     <Header user={user} />
     <Welcome user={user}  />
     <Boxes />
+
     </div>
     
   )

@@ -1,34 +1,44 @@
 import React from 'react';
-import List from './List';
 
-let myArr = ['Thing 1','Thing 2','Thing 3'];
+
 
 const App = () => {
 
-    const [tasks, setTasks] = React.useState(myArr)
+   let [formData, setFormData] = React.useState({
+     firstName : '',
+     lastName: '',
+     email: '',
+     comment: '',
+     isCorrect: true
+   });
 
-    console.log('Tasks: ',tasks)
+    console.table(formData);
 
-  
-    let data =  tasks?.map((item) => {
-            return (
-                <p key={item}>{item}</p>
-            )
-        })
+   const handleChange = (e) => {
    
+    let {name, value, type, checked} = e.target;
+    
+    setFormData(prevFormData => {
+        console.log(`name: ${name} \nvalue: ${value}\n`);   
+        return {
+            ...prevFormData,
+            [name]: type == 'checkbox' ? checked : value
+        }
+    })
+   }
 
-    let handleClick = () => {
-        setTasks((prevTaskArr) => {
-           return [...prevTaskArr, `Thing ${prevTaskArr.length + 1}`];
-        })
- 
-    }
-  return (
+   return (
     <div className='container'>
-        <button onClick={handleClick}>Add items</button>
-        <List data = {data} />
+        <form>
+            <input placeholder='First Name' type='text' onChange={handleChange} name='firstName' />
+            <input placeholder='Last Name' type='text' onChange={handleChange} name= 'lastName' />
+            <input type='email' placeholder='Enter email' onChange={handleChange} name='email' />
+            <textarea value={formData.comment} name='comment' onChange={handleChange} /><br/>
+            <input type='checkbox' id='is-Correct' onChange={handleChange} name='isCorrect'/>
+            <label htmlFor='is-Correct' >Above data is correct</label>
+        </form>
     </div>
-  )
+   )
 }
 
 export default App;
