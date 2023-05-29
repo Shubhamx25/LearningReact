@@ -13,6 +13,10 @@ const Meme = () => {
   
   });
 
+  React.useEffect(() => {
+    console.log('UseEffect ran');
+  },[meme.img])
+
   let handleClick = () => {
     let randomNo = Math.floor(Math.random() * memeData.data.data.memes.length);
     setMeme((prevMeme) => {
@@ -25,7 +29,7 @@ const Meme = () => {
   }
 
   let handleChange = (e) => {
-    let {name , value} = e.target;
+    let {name , value}  = e.target;
     setMeme(prevMeme => {
       return {
         ...prevMeme,
