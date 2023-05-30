@@ -31,7 +31,7 @@ const Navigbar = () => {
 
 
   return (
-    <div>
+   
         <Navbar  expand="lg" className={scrolled ? 'scrolled navbar-container' : 'navbar-container'}>
             <Container>
 
@@ -75,14 +75,9 @@ const Navigbar = () => {
                 </Navbar.Collapse>
             </Container>
     </Navbar>
-    <div className='test'>howdy</div>
-    <div className='test'>howdy</div>
-    <div className='test'>howdy</div>
-    <div className='test'>howdy</div>
-    <div className='test'>howdy</div>
-    <div className='test'>howdy</div>
     
-    </div>
+    
+   
   )
 }
 
