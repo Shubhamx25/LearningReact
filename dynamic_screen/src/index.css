@@ -1,0 +1,55 @@
+
+.container{
+    width: 50vw;
+    height: 50vh;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+.container.lightmode{
+    background-color: white;
+    color: black;
+
+}
+.container button{
+    padding: 10px;
+    font-size: 1.5rem;
+    border-radius: 9px;
+}
+.toggle{
+    position: relative;
+    background-color:white;
+    color: black;
+    display: inline-block;
+    width: 100px;
+    height: 52px;
+    border-radius: 30px;
+    border: 2px solid gray;
+}
+.toggle::after{
+    content: '';
+    position: absolute;
+    height: 50px;
+    width:50px;
+    background-color: gray;
+    border-radius: 50%;
+    top: 1px;
+    left: 1px;
+    transition:  all 0.5s;
+}
+.toggle p{
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        text-align: center;
+}
+
+.checkbox:checked + .toggle::after{
+    left: 49px;
+}
+.checkbox{
+    display:none;
+}
