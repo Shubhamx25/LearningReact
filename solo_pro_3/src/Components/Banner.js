@@ -15,10 +15,11 @@ const Banner = () => {
 
     let ticker = setInterval(() => {
         tick();
-    },delta);
+    },delta); 
 
     return () => clearInterval(ticker);
-
+     
+  // eslint-disable-next-line
   },[text])
 
   let tick = () => {
@@ -31,7 +32,7 @@ const Banner = () => {
         setDelta(prevDelta => prevDelta / 2);
     }
 
-    if(!isDeleting && updatedText == fullText){
+    if(!isDeleting && updatedText === fullText){ 
         setIsDeleting(true);
         setDelta(period);
     }else if  (isDeleting && updatedText === ''){
@@ -52,9 +53,9 @@ const Banner = () => {
                     <span className='tagline'>Welcome to my portfolio</span>
                     <h1>Hi! I am <span className='wrap'>{text} </span></h1>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-                    <button>Let's Connect <ArrowRightCircle size={25}/> </button>
+                    <button>Let's Connect&nbsp;<ArrowRightCircle size={25}/> </button>
                 </Col>
-                <Col xs={12} md={6} xl={7}>
+                <Col xs={12} md={6} xl={5}>
                     <img src={spaceImg} alt='header-img' className='space-img'/>
 
                      
