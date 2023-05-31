@@ -61,16 +61,17 @@ const Navigbar = () => {
                     
                 </Nav>
 
-                <span>
+                <span className='links-container'>
                     <div className='navbar-social-icons'>
                         <a href='#'><img src='https://cdn1.iconfinder.com/data/icons/social-media-circle-7/512/Circled_Instagram_svg-512.png'/></a>
                         <a href='#'><img src='https://cdn1.iconfinder.com/data/icons/social-media-circle-7/512/Circled_Linkedin_svg-512.png'/></a>
                         <a href='#'><img src='https://cdn1.iconfinder.com/data/icons/social-media-circle-7/512/Circled_Messenger_svg3-512.png'/></a>
                     </div>
+                    <div>
+                        <button>Lets Connect</button>
+                    </div>
                 </span>
-                <div>
-                    <button>Lets Connect</button>
-                </div>
+               
                 
                 </Navbar.Collapse>
             </Container>

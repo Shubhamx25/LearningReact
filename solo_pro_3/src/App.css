@@ -6,35 +6,134 @@
 
 html{
   scroll-behavior: smooth;
-  scroll-padding: 2px;
+  scroll-padding-top: 75px;
+}
+body{
+  font-weight: 400;
+  overflow-x: hidden;
+  font-family:Georgia, 'Times New Roman', Times, serif !important;
+  background-color: rgb(41, 41, 41) !important;
+  color: white !important;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
 }
 
-.navbar-container{
+nav.navbar {
+ padding: 18px 0;
+ position: fixed;
+ width: 100%;
+ top: 0;
+ z-index: 9999;
+ transition: 0.5s ease-in-out;
+}
+nav.navbar.scrolled{
+  padding: 0px 0;
   background-color: black;
+}
+nav.navbar a.navbar-brand{
+  width: 9%;
+}
+
+nav.navbar .navbar-nav .nav-link.navbar-link{
+  font-weight: 400;
+  color: white !important;
+  letter-spacing: 0.8px;
+  padding: 0 25px;
+  font-size: 18px;
+  opacity: 0.7;
+}
+
+nav.navbar .navbar-nav .nav-link.navbar-link.liactive,
+nav.navbar .navbar-nav .nav-link.navbar-link:hover{
+  opacity: 1;
+}
+
+span.links-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-social-icons a{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 15px;
+  background-color: rgba(217, 217, 217, 0.1);
+  padding: 2px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  border: 1px solid grey;
+}
+
+.navbar-social-icons a::before{
+  content: '';
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.3s ease-in-out;
+}
+
+.navbar-social-icons a:hover:before{
+  transform: scale(1);
+}
+
+.navbar-social-icons a img{
+  width: 80%;
+  z-index: 1;
+  transition: 0.5s ease-in-out;
+}
+
+.links-container button{
+  margin-left: 20px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  position: relative;
+  background-color: transparent;
   color: white;
 }
-
-
-
-
-.liactive{
-  color: rgb(255, 255, 255) !important;
-}
-.test{
-  height: 200px;
-}
-.test:nth-child(even){
-  background-color: rgb(56, 56, 56);
-}
-
-.navbar-social-icons img{
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  margin-right: 5px;
+.links-container button::before{
+  content: '';
   background-color: white;
-  padding: 2px;
+  border-radius: 6px;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: scaleX(0);
+  z-index: -1;
+  transition: 0.3s ease-in-out;
 }
+.links-container button:hover{
+  color: black;
+}
+
+.links-container button:hover::before{
+  transform: scaleX(1);
+  background-color: white;
+  color: black;
+  z-index: -2;
+}
+
+.space-img{
+  width: 100%;
+}
+
+
+
+
+
+
+
+
 
 
 

@@ -1,10 +1,16 @@
 import React from 'react';
-
+import axios from 'axios';
 
 import memeData from './getMeme';
 
 
+
 const Meme = () => {
+  React.useEffect(() => {
+      memeData()
+      .then((res) =>console.log(res));
+  },[])
+ 
   let [allMeme , setAllMeme] = React.useState(memeData);
   let [meme, setMeme] = React.useState({
     img: memeData.data.data.memes[Math.floor(Math.random() * memeData.data.data.memes.length)].url,
